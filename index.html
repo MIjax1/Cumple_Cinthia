@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#6f2338" />
+  <meta name="description" content="Una pequeña sorpresa de cumpleaños hecha por Mijail para Cinthia." />
+  <meta name="robots" content="noindex,nofollow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Para Cinthia 💗" />
+  <meta property="og:description" content="Cinthia, hay una sorpresa esperando por ti. Ábrela con el corazón." />
+  <!-- Al publicar puedes reemplazar og:image por la URL ABSOLUTA de assets/images/cinthia-card.webp -->
+  <meta property="og:image" content="assets/images/cinthia-card.webp" />
+  <title>Para Cinthia 💗 — Feliz 20</title>
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="fxCanvas" aria-hidden="true"></canvas>
+  <div class="ambient" aria-hidden="true">
+    <span class="orb orb--1"></span>
+    <span class="orb orb--2"></span>
+    <span class="orb orb--3"></span>
+    <div id="floatingHearts" class="floating-hearts"></div>
+  </div>
+
+  <!-- AUDIO: coloca una copia legal de la canción con este nombre -->
+  <audio id="bgMusic" preload="auto" loop playsinline autoplay>
+    <source src="assets/audio/amor.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Pantalla de entrada: necesaria como respaldo porque los navegadores suelen bloquear audio con sonido sin interacción -->
+  <section class="entry" id="entry" aria-labelledby="entryTitle">
+    <div class="entry__noise" aria-hidden="true"></div>
+    <div class="entry__content">
+      <div class="entry__mini">una pequeña sorpresa de Mijail</div>
+      <img class="entry__heart" src="assets/gif/heart-pulse.gif" alt="" />
+      <h1 id="entryTitle">Para Cinthia</h1>
+      <p>Hoy cumples <strong>20</strong> y preparé algo que no cabe en un solo mensaje.</p>
+      <button class="primary-button magnetic" id="enterBtn" type="button">
+        <span>Entrar a tu sorpresa</span>
+        <span class="button-icon">♡</span>
+      </button>
+      <p class="entry__hint" id="entryHint">Sube un poquito el volumen ✨</p>
+    </div>
+  </section>
+
+  <header class="topbar" id="topbar">
+    <a class="brand" href="#inicio" aria-label="Ir al inicio">M <span>♡</span> C</a>
+    <div class="topbar__actions">
+      <button class="icon-button" id="musicToggle" type="button" aria-label="Pausar o reproducir música" title="Música">
+        <span id="musicIcon">♫</span>
+      </button>
+      <button class="icon-button" id="fullscreenBtn" type="button" aria-label="Pantalla completa" title="Pantalla completa">⛶</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero section" id="inicio">
+      <div class="hero__sparkles" aria-hidden="true">
+        <img src="assets/gif/sparkles.gif" alt="" />
+      </div>
+      <div class="hero__copy reveal">
+        <span class="eyebrow">15 • 09 • 2026 · capítulo 20</span>
+        <h2>Feliz cumpleaños,<br /><em>Cinthia.</em></h2>
+        <p class="hero__lead" id="typewriter" aria-live="polite"></p>
+        <div class="hero__pills">
+          <span>20 años ✨</span>
+          <span>muchos sueños</span>
+          <span>Mijail + Cinthia</span>
+        </div>
+        <a class="scroll-cue" href="#historia">desliza para descubrir <span>↓</span></a>
+      </div>
+
+      <div class="hero__art reveal" data-delay="120">
+        <div class="portrait-frame tilt-card" id="tiltCard">
+          <picture>
+            <source srcset="assets/images/cinthia-card.webp" type="image/webp" />
+            <img src="assets/images/cinthia-card.png" alt="Tarjeta de cumpleaños para Cinthia, de parte de Mijail" />
+          </picture>
+          <span class="tape tape--top"></span>
+          <span class="tape tape--bottom"></span>
+          <span class="portrait-frame__shine" aria-hidden="true"></span>
+        </div>
+        <div class="hero-note note-card">“Contigo todo se siente más bonito” ♡</div>
+      </div>
+    </section>
+
+    <!-- HISTORIA 19 > 20 > INFINITO -->
+    <section class="story section" id="historia">
+      <div class="section-heading reveal">
+        <span class="eyebrow">una historia que recién empieza</span>
+        <h2>De tus 19… a tus 20… <em>y ojalá muchos más.</em></h2>
+        <p>Hay números que dejan de ser números cuando guardan recuerdos.</p>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-card reveal">
+          <div class="timeline-card__number">19</div>
+          <span class="timeline-card__tag">cuando te conocí</span>
+          <p>Te conocí teniendo 19. En ese momento no sabía cuánto ibas a significar para mí ni cuántos recuerdos iban a empezar a llevar tu nombre.</p>
+        </article>
+        <div class="timeline-heart reveal" aria-hidden="true">♡</div>
+        <article class="timeline-card timeline-card--featured reveal" data-delay="100">
+          <div class="timeline-card__number">20</div>
+          <span class="timeline-card__tag">hoy</span>
+          <p>Hoy celebro tus 20, tu nueva etapa, tus sueños y todo lo que todavía te falta descubrir de ti misma. Me hace feliz poder estar aquí para verlo.</p>
+        </article>
+        <div class="timeline-heart reveal" aria-hidden="true">♡</div>
+        <article class="timeline-card reveal" data-delay="200">
+          <div class="timeline-card__number">∞</div>
+          <span class="timeline-card__tag">mi deseo</span>
+          <p>No sé cuántos cumpleaños nos regalará la vida, pero sí sé que me encantaría seguir haciendo cada uno de ellos un poquito más especial para ti.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 20 RAZONES -->
+    <section class="reasons section" id="razones">
+      <div class="section-heading reveal">
+        <span class="eyebrow">juego #1 · toca cada corazón</span>
+        <h2>20 cositas que <em>amo de ti.</em></h2>
+        <p>No tienes que descubrirlas en orden. Cada corazón guarda una.</p>
+      </div>
+
+      <div class="progress-wrap reveal">
+        <div class="progress-copy"><span id="reasonProgressText">0 de 20 descubiertas</span><strong id="reasonPercent">0%</strong></div>
+        <div class="progress-track"><span id="reasonProgressBar"></span></div>
+      </div>
+
+      <div class="heart-grid reveal" id="heartGrid" aria-label="20 razones que amo de Cinthia"></div>
+      <div class="reason-display" id="reasonDisplay" aria-live="polite">
+        <span class="reason-display__number">♡</span>
+        <p>Toca un corazón para comenzar.</p>
+      </div>
+    </section>
+
+    <!-- CONSTELACIÓN -->
+    <section class="constellation section" id="constelacion">
+      <div class="section-heading section-heading--light reveal">
+        <span class="eyebrow">juego #2 · encuentra las 5 estrellas</span>
+        <h2>Hay cosas tuyas que <em>siempre encuentro.</em></h2>
+        <p>Toca las cinco estrellas brillantes. Al final se desbloquea un mensaje.</p>
+      </div>
+
+      <div class="sky reveal" id="sky" aria-label="Constelación interactiva">
+        <button class="star star--1" data-word="tu risa" aria-label="Estrella 1">✦</button>
+        <button class="star star--2" data-word="tus ojos" aria-label="Estrella 2">✦</button>
+        <button class="star star--3" data-word="tu fuerza" aria-label="Estrella 3">✦</button>
+        <button class="star star--4" data-word="tu forma de ser" aria-label="Estrella 4">✦</button>
+        <button class="star star--5" data-word="a ti" aria-label="Estrella 5">✦</button>
+        <div class="constellation-lines" aria-hidden="true"></div>
+        <div class="sky__center" id="skyMessage">
+          <span id="starCounter">0 / 5</span>
+          <p>todavía faltan estrellas…</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCRATCH CARD -->
+    <section class="scratch-section section" id="secreto">
+      <div class="section-heading reveal">
+        <span class="eyebrow">juego #3 · rasca para descubrir</span>
+        <h2>Un mensaje <em>escondido.</em></h2>
+        <p>Usa el dedo o el mouse para borrar la capa de arriba.</p>
+      </div>
+      <div class="scratch-card reveal" id="scratchCard">
+        <div class="scratch-card__secret">
+          <span>mi coincidencia favorita</span>
+          <strong>eres tú, Cinthia. ♡</strong>
+          <small>y volvería a coincidir contigo.</small>
+        </div>
+        <canvas id="scratchCanvas" aria-label="Rasca la tarjeta para descubrir el mensaje"></canvas>
+      </div>
+      <div class="scratch-progress reveal"><span id="scratchPercent">0%</span> descubierto</div>
+    </section>
+
+    <!-- SOBRE/CARTA -->
+    <section class="letter-section section" id="carta">
+      <div class="section-heading reveal">
+        <span class="eyebrow">ahora sí… una carta</span>
+        <h2>Esto sí quería <em>decírtelo despacio.</em></h2>
+        <p>Toca el sello para abrirla.</p>
+      </div>
+
+      <div class="envelope-stage reveal">
+        <div class="envelope" id="envelope">
+          <div class="envelope__back"></div>
+          <article class="letter" id="letter">
+            <div class="letter__date">para Cinthia · en sus 20</div>
+            <h3>Mi amor,</h3>
+            <div id="letterText" class="letter__text">
+              <p>Hoy no solo celebro que cumplas 20. Celebro que existas, que seas tú y que la vida haya hecho que en algún momento nuestros caminos se cruzaran.</p>
+              <p>Gracias por compartir tu tiempo conmigo, por escucharme, por estar y por todo lo que vamos construyendo poco a poco. Me gusta verte crecer, aprender, cambiar y descubrir nuevas versiones de ti.</p>
+              <p>Amo tu personalidad, tu risa, tus ocurrencias, tus ojos, tus labios, tus lunares y hasta esas cositas que tú llamas “defectos”, porque para mí también forman parte de todo eso que te hace única.</p>
+              <p>Admiro mucho la fuerza que tienes cuando las cosas se ponen difíciles. Y quiero que recuerdes que conmigo tienes a alguien que quiere escucharte, apoyarte, celebrar tus logros y también quedarse cuando el día no salga como esperabas.</p>
+              <p>Deseo que tus 20 te traigan experiencias bonitas, metas cumplidas, tranquilidad, aventuras, dulces —muchos dulces— y razones para sonreír. Y si puedo seguir estando a tu lado para compartir parte de todo eso, sería todavía más bonito.</p>
+              <p class="letter__closing">Te adoro muchísimo, Cinthia.<br />Feliz vida. ♡</p>
+              <p class="letter__signature">Con amor,<br /><strong>Mijail</strong></p>
+            </div>
+          </article>
+          <div class="envelope__front"></div>
+          <div class="envelope__flap"></div>
+          <button class="wax-seal" id="sealBtn" type="button" aria-label="Abrir la carta">M+C</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÚSICA -->
+    <section class="music-story section" id="cancion">
+      <div class="music-card reveal">
+        <div class="vinyl" id="vinyl" aria-hidden="true"><span></span></div>
+        <div class="music-card__info">
+          <span class="eyebrow">la canción de esta página</span>
+          <h2>Amor</h2>
+          <p>Emmanuel Cortes · 2023</p>
+          <blockquote>No necesito copiar la letra aquí. Quería que la canción sonara mientras descubres todo esto, porque el mensaje ya dice suficiente. ♡</blockquote>
+          <div class="player-inline">
+            <button id="inlinePlay" class="mini-play" type="button" aria-label="Reproducir o pausar">▶</button>
+            <div class="player-inline__track"><span id="audioProgress"></span></div>
+            <span id="audioTime">0:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOLD PROMISE -->
+    <section class="promise section" id="promesa">
+      <div class="section-heading reveal">
+        <span class="eyebrow">un pequeño pacto</span>
+        <h2>Mantén presionado para <em>sellar esta promesa.</em></h2>
+        <p>Solo tarda unos segundos.</p>
+      </div>
+
+      <button class="hold-button reveal" id="holdButton" type="button">
+        <span class="hold-button__fill" id="holdFill"></span>
+        <span class="hold-button__content"><strong id="holdLabel">Mantén presionado</strong><small>♡</small></span>
+      </button>
+      <p class="promise-result" id="promiseResult" aria-live="polite"></p>
+    </section>
+
+    <!-- FINAL QUESTION -->
+    <section class="final-question section" id="final">
+      <div class="final-card reveal">
+        <span class="eyebrow">una última pregunta</span>
+        <h2>Cinthia…</h2>
+        <p class="final-card__question">¿me permitirías seguir acompañándote en tus próximos cumpleaños?</p>
+        <div class="final-actions">
+          <button class="answer-button answer-button--yes" data-answer="obvio" type="button">Obviamente sí ❤️</button>
+          <button class="answer-button" data-answer="dulces" type="button">Sí, pero con muchos dulces 🍭</button>
+        </div>
+        <div class="final-answer" id="finalAnswer" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- CIERRE -->
+    <section class="closing section" id="cierre">
+      <div class="closing__inner reveal">
+        <img src="assets/gif/heart-pulse.gif" alt="" class="closing__heart" />
+        <span class="eyebrow">fin de la página · no de la historia</span>
+        <h2>Feliz vida,<br /><em>Cinthia.</em></h2>
+        <p>Gracias por coincidir conmigo.</p>
+        <div class="closing__signature">Mijail <span>♡</span></div>
+        <div class="closing__buttons">
+          <button class="secondary-button" id="replayBtn" type="button">Volver al inicio ↟</button>
+          <button class="secondary-button" id="shareBtn" type="button">Compartir este recuerdo ♡</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PLAYER FLOTANTE -->
+  <aside class="floating-player" id="floatingPlayer" aria-label="Reproductor de música">
+    <button class="floating-player__disc" id="playerMainBtn" type="button" aria-label="Reproducir o pausar música">♫</button>
+    <div class="floating-player__meta">
+      <strong>Amor</strong>
+      <span>Emmanuel Cortes</span>
+    </div>
+    <input id="volumeControl" class="volume" type="range" min="0" max="1" step="0.05" value="0.72" aria-label="Volumen" />
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <noscript>
+    <div class="noscript">Esta sorpresa necesita JavaScript activado para mostrar las interacciones. ♡</div>
+  </noscript>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

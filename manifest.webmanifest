@@ -1,0 +1,14 @@
+{
+  "name": "Para Cinthia 💗",
+  "short_name": "Cinthia 💗",
+  "description": "Una sorpresa de cumpleaños hecha por Mijail para Cinthia.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f8efe9",
+  "theme_color": "#6f2338",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
