@@ -299,12 +299,30 @@
   setupScratch();
   window.addEventListener('resize', () => { if (!scratchDone) setupScratch(); });
 
-  // ---------- Sobre ----------
+  // ---------- Sobre / carta ----------
   const envelope = $('#envelope');
-  $('#sealBtn').addEventListener('click', () => {
+  const envelopeStage = $('#envelopeStage');
+  const letter = $('#letter');
+  const sealBtn = $('#sealBtn');
+
+  sealBtn.addEventListener('click', () => {
+    if (envelope.classList.contains('is-open')) return;
+
     envelope.classList.add('is-open');
-    burst(window.innerWidth/2, window.innerHeight*.55, 42, ['#9a2c45','#efb3c2','#d6ae73']);
+    envelopeStage.classList.add('is-open');
+    letter.setAttribute('aria-hidden', 'false');
+    sealBtn.setAttribute('aria-expanded', 'true');
+
+    burst(window.innerWidth / 2, window.innerHeight * .58, 46, ['#9a2c45','#efb3c2','#d6ae73','#fff0f4']);
     showToast('Carta abierta para Cinthia 💌');
+
+    // Después de la animación, centra suavemente la carta sin esconder el sobre.
+    window.setTimeout(() => {
+      const topbarOffset = 100;
+      const rect = letter.getBoundingClientRect();
+      const target = window.scrollY + rect.top - topbarOffset;
+      window.scrollTo({ top: Math.max(0, target), behavior: 'smooth' });
+    }, 780);
   });
 
   // ---------- Hold to promise ----------

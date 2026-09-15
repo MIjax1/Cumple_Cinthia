@@ -189,26 +189,29 @@
         <p>Toca el sello para abrirla.</p>
       </div>
 
-      <div class="envelope-stage reveal">
+      <div class="envelope-stage reveal" id="envelopeStage">
         <div class="envelope" id="envelope">
           <div class="envelope__back"></div>
-          <article class="letter" id="letter">
-            <div class="letter__date">para Cinthia · en sus 20</div>
-            <h3>Mi amor,</h3>
-            <div id="letterText" class="letter__text">
-              <p>Hoy no solo celebro que cumplas 20. Celebro que existas, que seas tú y que la vida haya hecho que en algún momento nuestros caminos se cruzaran.</p>
-              <p>Gracias por compartir tu tiempo conmigo, por escucharme, por estar y por todo lo que vamos construyendo poco a poco. Me gusta verte crecer, aprender, cambiar y descubrir nuevas versiones de ti.</p>
-              <p>Amo tu personalidad, tu risa, tus ocurrencias, tus ojos, tus labios, tus lunares y hasta esas cositas que tú llamas “defectos”, porque para mí también forman parte de todo eso que te hace única.</p>
-              <p>Admiro mucho la fuerza que tienes cuando las cosas se ponen difíciles. Y quiero que recuerdes que conmigo tienes a alguien que quiere escucharte, apoyarte, celebrar tus logros y también quedarse cuando el día no salga como esperabas.</p>
-              <p>Deseo que tus 20 te traigan experiencias bonitas, metas cumplidas, tranquilidad, aventuras, dulces —muchos dulces— y razones para sonreír. Y si puedo seguir estando a tu lado para compartir parte de todo eso, sería todavía más bonito.</p>
-              <p class="letter__closing">Te adoro muchísimo, Cinthia.<br />Feliz vida. ♡</p>
-              <p class="letter__signature">Con amor,<br /><strong>Mijail</strong></p>
-            </div>
-          </article>
+          <div class="envelope__paper-peek" aria-hidden="true"></div>
           <div class="envelope__front"></div>
           <div class="envelope__flap"></div>
           <button class="wax-seal" id="sealBtn" type="button" aria-label="Abrir la carta">M+C</button>
         </div>
+
+        <article class="letter" id="letter" aria-hidden="true">
+          <div class="letter__ornament" aria-hidden="true">♡</div>
+          <div class="letter__date">para Cinthia · en sus 20</div>
+          <h3>Mi amor,</h3>
+          <div id="letterText" class="letter__text">
+            <p>Hoy no solo celebro que cumplas 20. Celebro que existas, que seas tú y que la vida haya hecho que en algún momento nuestros caminos se cruzaran.</p>
+            <p>Gracias por compartir tu tiempo conmigo, por escucharme, por estar y por todo lo que vamos construyendo poco a poco. Me gusta verte crecer, aprender, cambiar y descubrir nuevas versiones de ti.</p>
+            <p>Amo tu personalidad, tu risa, tus ocurrencias, tus ojos, tus labios, tus lunares y hasta esas cositas que tú llamas “defectos”, porque para mí también forman parte de todo eso que te hace única.</p>
+            <p>Admiro mucho la fuerza que tienes cuando las cosas se ponen difíciles. Y quiero que recuerdes que conmigo tienes a alguien que quiere escucharte, apoyarte, celebrar tus logros y también quedarse cuando el día no salga como esperabas.</p>
+            <p>Deseo que tus 20 te traigan experiencias bonitas, metas cumplidas, tranquilidad, aventuras, dulces —muchos dulces— y razones para sonreír. Y si puedo seguir estando a tu lado para compartir parte de todo eso, sería todavía más bonito.</p>
+            <p class="letter__closing">Te adoro muchísimo, Cinthia.<br />Feliz vida. ♡</p>
+            <p class="letter__signature">Con amor,<br /><strong>Mijail</strong></p>
+          </div>
+        </article>
       </div>
     </section>
 
